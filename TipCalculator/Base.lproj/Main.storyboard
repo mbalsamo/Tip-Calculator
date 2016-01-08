@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TipCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,136 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aer-Jw-Ab7">
+                                <rect key="frame" x="174" y="411" width="67" height="67"/>
+                                <animations/>
+                                <state key="normal" image="15_unselected_image"/>
+                                <connections>
+                                    <action selector="percent2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G1f-Fz-Zai"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="311-FG-LLD">
+                                <rect key="frame" x="127" y="486" width="68" height="67"/>
+                                <animations/>
+                                <state key="normal" image="20_unselected_image"/>
+                                <connections>
+                                    <action selector="percent3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="niz-J2-X6Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Mc-Vo-A1w">
+                                <rect key="frame" x="214" y="486" width="67" height="67"/>
+                                <animations/>
+                                <state key="normal" image="25_unselected_image"/>
+                                <connections>
+                                    <action selector="percent3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c3g-BI-h0I"/>
+                                    <action selector="percent4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FM6-33-nNL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Onn-qe-TeN">
+                                <rect key="frame" x="73" y="411" width="72" height="67"/>
+                                <animations/>
+                                <state key="normal" image="10_unselected_image"/>
+                                <connections>
+                                    <action selector="calcuate10Percent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="phK-FN-cQB"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Put Sub-Total Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qi9-Gr-5LS">
+                                <rect key="frame" x="34" y="42" width="143" height="30"/>
+                                <animations/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePA-ma-6CU">
+                                <rect key="frame" x="73" y="79" width="64" height="31"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="calculateOnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GEp-cr-qde"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="anwserLabelOther" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRM-vh-ZvI">
+                                <rect key="frame" x="8" y="106" width="194" height="87"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How many people are there?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTn-J8-ysv">
+                                <rect key="frame" x="214" y="28" width="120" height="67"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aK-nb-Cel">
+                                <rect key="frame" x="206" y="100" width="48" height="39"/>
+                                <animations/>
+                                <state key="normal" image="up_arrow_image"/>
+                                <connections>
+                                    <action selector="upArrow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lxh-Av-wfy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tc-QN-vZk">
+                                <rect key="frame" x="247" y="103" width="54" height="36"/>
+                                <animations/>
+                                <state key="normal" image="down_arrow_image"/>
+                                <connections>
+                                    <action selector="downArrow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="miU-ax-OmT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="peopleLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YT-X9-woZ">
+                                <rect key="frame" x="195" y="147" width="121" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFK-O8-xlj">
+                                <rect key="frame" x="34" y="486" width="67" height="67"/>
+                                <animations/>
+                                <state key="normal" image="18_unselected_image"/>
+                                <connections>
+                                    <action selector="calculate18:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gM9-L7-Fso"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxn-21-QYD">
+                                <rect key="frame" x="17" y="210" width="427" height="184"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="dismissKeyboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Li-dg-F56"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.050980392156862744" green="0.043137254901960784" blue="0.16078431372549021" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="8bC-Xf-vdC" id="Lj4-Zl-ex9"/>
+                        <outlet property="answerLabelOther" destination="YRM-vh-ZvI" id="Qnv-K8-PSW"/>
+                        <outlet property="calculate10" destination="Onn-qe-TeN" id="xJJ-4I-YYw"/>
+                        <outlet property="calculate15" destination="aer-Jw-Ab7" id="ccT-Va-pRl"/>
+                        <outlet property="calculate20" destination="311-FG-LLD" id="NWs-3Y-Lbb"/>
+                        <outlet property="calculate25" destination="4Mc-Vo-A1w" id="O6S-iJ-PwX"/>
+                        <outlet property="peopleLabel" destination="5YT-X9-woZ" id="F7S-ue-dND"/>
+                        <outlet property="tipTextField" destination="qi9-Gr-5LS" id="0v9-u6-PFu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="288" y="321"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="10_unselected_image" width="67" height="67"/>
+        <image name="15_unselected_image" width="67" height="67"/>
+        <image name="18_unselected_image" width="67" height="67"/>
+        <image name="20_unselected_image" width="67" height="67"/>
+        <image name="25_unselected_image" width="67" height="67"/>
+        <image name="down_arrow_image" width="40" height="36"/>
+        <image name="up_arrow_image" width="40" height="36"/>
+    </resources>
 </document>
